@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fachometro</title>
+		<link rel="stylesheet" href="../css/style.css">
+
+	</head>
+	<body>
+		<div id="main">
+			<div id="header">
+				<h1>FACHOMETRO</h1>
+			</div>
+			<form id="form1">
+				<fieldset>
+					<h2>1. ¿La diabetes es una enfermedad de alto poder adquisitivo?</h2>
+					<label for="q1resp1"><input type="radio" name="q1" value="0" />Sí, maldito gobierno americano.</label>
+					<label for="q1resp2"><input type="radio" name="q1" value="2" />¿Qué barbaridad estás diciendo?</label>
+					<label for="q1resp3"><input type="radio" name="q1" value="1" />Te la debo, no estoy en el tema.</label>
+
+					<h2>2. Las kukas son:</h2>
+					<label for="q2resp1"><input type="radio" name="q2" value="1" />Un ser que sobrevive la bomba nuclear</label>
+					<label for="q2resp2"><input type="radio" name="q2" value="2" />Los que no vuelven más</label>
+					<label for="q2resp3"><input type="radio" name="q2" value="0" />La resistencia. ¡Volveremos!</label>
+
+
+					<h2>3. Sobre la toma de colegios opino que:</h2>
+					<label for="q3resp1"><input type="radio" name="q3" value="0" />Es la única forma de hacerse escuchar, luchar por los derechos.</label>
+					<label for="q3resp2"><input type="radio" name="q3" value="1" />Son unos vagos, deberían ponerse a estudiar y dejar el charuto.</label>
+					<label for="q3resp3"> <input type="radio" name="q3" value="2" />Que vuelva el servicio militar </label>
+
+
+					<h2>4.¿Qué hay que hacer para mejorar el país?</h2>
+					<label for="q4resp1"><input type="radio" name="q4" value="2" />No prender la estufa en invierno para estar en remera.</label>
+					<label for="q4resp2"><input type="radio" name="q4" value="0" />Concretar la revolución proletaria.</label>
+					<label for="q4resp3"><input type="radio" name="q4" value="1" />Vivir y dejar vivir. No meterse en problemas.</label>
+
+					<h2>5. Sobre la pobreza, pensás:</h2>
+					<label for="q5resp1"><input type="radio" name="q5" value="1" />Es un bajón, mejor no hablar de ciertas cosas.</label>
+					<label for="q5resp2"><input type="radio" name="q5" value="0" />Odio a los blancos y a la puta oligarquía.</label>
+					<label for="q5resp3"><input type="radio" name="q5" value="2" />Un problema estructural.</label>
+
+					<h2>6. Mi principal fuente de información es:</h2>
+					<label for="q6resp1"><input type="radio" name="q6" value="2" />Periodismo Para Todos, TN, Clarín, Mitre.</label>
+					<label for="q6resp2"><input type="radio" name="q6" value="0" />C5N, Página 12, La Garganta Poderosa.</label>
+					<label for="q6resp3"><input type="radio" name="q6" value="1" />Me informo de manera integral, escucho las dos campanas.</label>
+
+
+					<h2>7. Los homosexuales deberían:</h2>
+					<label for="q7resp1"><input type="radio" name="q7" value="2" />Esconderse ¿Cómo le explico a la criatura?</label>
+					<label for="q7resp2"><input type="radio" name="q7" value="1" />Tener lo mismo derechos que los hombres heterosexuales blancos de clase media.</label>
+					<label for="q7resp3"> <input type="radio" name="q7" value="0" />Armar un partido y ganar las elecciones. </label>
+
+
+					<h2>8.Tu comida típica es:</h2>
+					<label for="q8resp1"><input type="radio" name="q8" value="2" />Sandwich de pan árabe en un colchón de verdes y salsa de soja.</label>
+					<label for="q8resp2"><input type="radio" name="q8" value="0" />La olla comunitaria de la unidad básica del PO.</label>
+					<label for="q8resp3"><input type="radio" name="q8" value="1" />El pollito con papas de mamá aunque la ultima vez se le quemó y no le salieron como antes *cries in  gay spanish*</label>
+
+					<h2>9.“El comandante” es:</h2>
+					<label for="q9resp1"><input type="radio" name="q9" value="1" />Ricky Fort.</label>
+					<label for="q9resp2"><input type="radio" name="q9" value="0" />Juan Domingo</label>
+					<label for="q9resp3"> <input type="radio" name="q9" value="2" />Un montonero pone bomba.
+
+
+					<h2>10. Las feministas:</h2>
+					<label for="q10resp1"><input type="radio" name="q10" value="0" />Luchan contra la sociedad patriarcal que lo único que quiere es ver a la mujer sometida.
+¡Copa menstrual para todas!</label>
+					<label for="q10resp2"><input type="radio" name="q10" value="1" />Reclaman por una causa justa pero no deberían pintar paredes.</label>
+					<label for="q10resp3"><input type="radio" name="q10" value="2" />Son una ridiculez.</label>
+
+					<button  type="submit" value="Submit">RESULTADO</button>
+					<div id="resultado">
+					<p>Tu nivel de facho: <span id="grade"></span></p>
+					<p id="grade2"></p>
+					</div>
+
+				</fieldset>
+			</form>
+
+
+
+
+			<script>
+			document.getElementById("form1").onsubmit=function() {
+			q1= parseInt(document.querySelector('input[name = "q1"]:checked').value);
+			q2= parseInt(document.querySelector('input[name = "q2"]:checked').value);
+			q3= parseInt(document.querySelector('input[name = "q3"]:checked').value);
+			q4= parseInt(document.querySelector('input[name = "q4"]:checked').value);
+			q5= parseInt(document.querySelector('input[name = "q5"]:checked').value);
+			q6= parseInt(document.querySelector('input[name = "q6"]:checked').value);
+			q7= parseInt(document.querySelector('input[name = "q7"]:checked').value);
+			q8= parseInt(document.querySelector('input[name = "q8"]:checked').value);
+			q9= parseInt(document.querySelector('input[name = "q9"]:checked').value);
+			q10= parseInt(document.querySelector('input[name = "q10"]:checked').value);
+
+
+
+				result = q1 + q2+ q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10;
+
+				document.getElementById("grade").innerHTML = result;
+			grading = [
+				{score:0,feedback:"Sos un facho de Izquierda", image: "../img/hoz.png"},
+			 	{score:1,feedback:"Sos un facho de Izquierda", image: "../img/hoz.png"},
+				{score:2,feedback:"Sos un facho de Izquierda", image: "../img/hoz.png"},
+				{score:3,feedback:"Sos un facho de Izquierda", image: "../img/hoz.png"},
+				{score:4,feedback:"Sos un facho de Izquierda", image: "../img/hoz.png"},
+				{score:5,feedback:"Sos un facho de Izquierda", image: "../img/hoz.png"},
+				{score:6,feedback:"Sos un facho de Izquierda", image: "../img/hoz.png"},
+				{score:7,feedback:"Vivis en una burbuja", image: "0.jpg"},
+				{score:8,feedback:"Vivis en una burbuja", image: "0.jpg"},
+				{score:9,feedback:"Vivis en una burbuja", image: "0.jpg"},
+				{score:10,feedback:"Vivis en una burbuja", image: "0.jpg"},
+				{score:11,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+				{score:12,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+				{score:13,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+				{score:14,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+				{score:15,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+				{score:16,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+				{score:17,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+				{score:18,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+				{score:19,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+				{score:20,feedback:"Sos un facho de derecha", image: "../img/macana.png"},
+					];
+
+			for(i=0; i<grading.length; i++) {
+				if(result == grading[i].score) {
+				result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
+					}
+					}
+				document.getElementById("grade2").innerHTML = result2;
+				return false; 
+				} 
+				</script>
+			</div>
+		</body>
+	</html>
